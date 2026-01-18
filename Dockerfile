@@ -1,10 +1,9 @@
-# Dockerfile
-FROM caddy:builder AS builder
+FROM caddy:2-builder AS builder
 
 RUN xcaddy build \
     --with github.com/caddy-dns/ovh \
     --with github.com/mholt/caddy-l4
 
-FROM caddy:latest
+FROM caddy:2
 
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy

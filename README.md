@@ -22,11 +22,9 @@ ghcr.io/taryev/sthub-caddy:latest
 ## 🚀 Usage with Docker Compose
 
 ```yaml
-version: '3.8'
-
 services:
   caddy:
-    image: ghcr.io/taryev/sthub-caddy:latest
+    image: ghcr.io/taryev/sthub-caddy:2
     restart: unless-stopped
     ports:
       - "80:80"
